@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: url("../images/web_\ code.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-size: $bbcs-fSize;
+
+  header {
+    a {
+      color: $bbcs-cFont;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:active,
+      &:hover,
+      &:focus {
+        background-color: lightgrey;
+        color: inherit;
+        text-decoration: inherit;
+      }
+    }
+  }
+
+  main {
+    margin-left: $bbcs-wSideNav;
+    margin-top: 4rem;
+    padding: 2rem 3.6rem;
+  }
+
+  &.dark {
+    header {
+      a {
+        color: $bbcs-cFontDark;
+
+        &:active,
+        &:hover,
+        &:focus {
+          background-color: #555555;
+        }
+      }
+    }
+  }
+}

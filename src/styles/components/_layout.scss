@@ -1,0 +1,242 @@
+body {
+  nav + a {
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $bbcs-cActivityBar;
+    }
+  }
+
+  #contentTop {
+    min-height: calc(100vh - 4rem);
+  }
+
+  #globalHeader {
+    background-color: $bbcs-cActivityBar;
+    height: 4rem;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    width: $bbcs-wContainer;
+    z-index: 100;
+
+    div,
+    img,
+    li,
+    nav,
+    ul {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+
+    .global-nav {
+      list-style-type: none;
+      margin-left: 2rem;
+      padding-left: 0;
+
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          width: $bbcs-wSideNav - $bbcs-wActivityBar;
+        }
+      }
+
+      li a {
+        padding: 1rem 1rem;
+      }
+    }
+  }
+
+  #sideNav {
+    background-color: $bbcs-cActivityBar; /* Black */
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    overflow: hidden; /* Disable horizontal scroll */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 4rem; /* Stay at the top */
+    width: $bbcs-wSideNav; /* Set the width of the sidebar */
+    z-index: 1; /* Stay on top */
+
+    div {
+      &.activity-bar,
+      &.side-bar {
+        display: inline-block;
+      }
+
+      &.activity-bar {
+        padding-top: 1.5rem;
+        vertical-align: top;
+        width: $bbcs-wActivityBar;
+
+        svg {
+          color: grey;
+          height: 3.7rem;
+          margin-bottom: 2rem;
+          padding: 0 0.7rem;
+          width: 3.7rem;
+
+          &:first-child {
+            border-left: $bbcs-cFont 0.2rem solid;
+            color: $bbcs-cFont;
+          }
+        }
+      }
+
+      &.side-bar {
+        background-color: $bbcs-cArticleBar;
+        height: 100%;
+        padding-top: 1.5rem;
+        width: $bbcs-wSideNav - $bbcs-wActivityBar;
+
+        #posts,
+        #themes {
+          a {
+            display: block;
+            font-size: $bbcs-fSize;
+            padding: 0.25rem 0 1rem 3rem;
+
+            &:active,
+            &:focus,
+            &:hover {
+              width: $bbcs-wSideNav - $bbcs-wActivityBar;
+            }
+          }
+        }
+
+        #themes {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  h1.main-heading {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .container {
+    background-color: $bbcs-cBackground;
+    color: $bbcs-cFont;
+    max-width: $bbcs-wContainer;
+    width: $bbcs-wContainer;
+  }
+
+  .copyright,
+  .copyright a {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
+
+  .copyright {
+    padding: 1rem;
+  }
+
+  .copyright a {
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $bbcs-cArticleBar;
+      text-decoration: underline;
+    }
+  }
+
+  .global-wrapper {
+    padding: 0;
+  }
+
+  .side-nav-container {
+    background-color: inherit;
+    min-height: 24rem;
+  }
+
+  .site-logo {
+    margin: 0.25rem 0;
+    width: 5rem;
+  }
+
+  .theme-choice {
+    margin-left: 5.3rem;
+
+    .theme-checkbox {
+      display: none;
+    }
+
+    .theme-checkbox:checked + .theme-switch:after {
+      left: 4rem;
+    }
+    .theme-checkbox:checked + .theme-switch {
+      background-color: #fffacd;
+      background-image: url("/assets/moon.svg");
+
+      &:after {
+        background-color: #012169;
+      }
+    }
+
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 6.5rem;
+      height: 3rem;
+      background-color: #012169;
+      background-image: url("/assets/sun.svg");
+      border-radius: 2rem;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        background-color: #fffacd;
+        top: 0.4rem; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH.
+        left: 0.6rem;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &.dark {
+    nav + a {
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $bbcs-cActivityBarDark;
+      }
+    }
+    #globalHeader {
+      background-color: $bbcs-cActivityBarDark;
+    }
+
+    #sideNav {
+      background-color: $bbcs-cActivityBarDark;
+
+      div.activity-bar svg {
+        &:first-child {
+          border-left: $bbcs-cFontDark 0.2rem solid;
+          color: $bbcs-cFontDark;
+        }
+      }
+
+      div.side-bar {
+        background-color: $bbcs-cArticleBarDark;
+      }
+    }
+
+    .container {
+      background-color: $bbcs-cBackgroundDark;
+      color: $bbcs-cFontDark;
+    }
+
+    .copyright a {
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $bbcs-cArticleBarDark;
+      }
+    }
+  }
+}
