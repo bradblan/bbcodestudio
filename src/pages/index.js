@@ -1,12 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
   const title = "Home"
   const pageTitle = title + " - " + siteTitle
 
@@ -79,8 +78,8 @@ const Index = ({ data, location }) => {
                 <h3 class="card-title">Color Themes</h3>
                 <p class="card-text">
                   Need a new perspective? Click Themes and choose the dark side
-                  or head to the light! Click on Dark or Light to see a preview
-                  of the theme or the switch to change it.
+                  or head to the light to see a preview of the theme or click
+                  the switch to change it.
                 </p>
               </div>
             </div>
@@ -98,19 +97,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
       }
     }
   }
