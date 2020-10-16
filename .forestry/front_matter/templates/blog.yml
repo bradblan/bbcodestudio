@@ -21,7 +21,7 @@ fields:
 - name: tags
   type: tag_list
   label: Site Tags
-  description: Pick your poison
+  description: 'Pick your poison'
   default:
   - React
   - Gatsby
