@@ -6,6 +6,20 @@ body {
     box-shadow: rgb(128, 128, 128) 0px 4px 0.9rem;
   }
 
+  .gatsby-highlight {
+    background-color: #1d1f21;
+    border-radius: 0.3rem;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    overflow: auto;
+  }
+
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding-left: 2.8rem;
+    overflow: initial;
+  }
+
   &.dark {
     .bbcs-card {
       background-color: $bbcs-cFont;
@@ -13,27 +27,3 @@ body {
     }
   }
 }
-
-/* body,
-body.dark {
-  .side-links,
-  .show,
-  .hide:target {
-    display: none;
-  }
-
-  .hide,
-  .show {
-    padding: 1rem 0 1rem 1rem;
-  }
-
-  .hide {
-    display: block;
-  }
-
-  .hide:target + .show,
-  .hide:target ~ .side-links {
-    display: block;
-  }
-}
- */
