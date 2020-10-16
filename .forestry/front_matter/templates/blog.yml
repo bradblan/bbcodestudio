@@ -23,9 +23,37 @@ fields:
   label: Site Tags
   description: Pick your poison
   default:
+    - Bootstrap
+    - Breadcrumbs
+    - CMS
     - Code
     - CSS
-    - Gatsby
-    - React
+    - Debugging
+    - Graphql
+- name: category
+  type: select
+  label: Category
+  description: Select a category for this post
+  hidden: false
+  config:
+    source:
+      type: custom
+    options:
+      - "Accessibility"
+      - "Code"
+      - "Css"
+      - "Gatsby"
+      - "React"
+- name: type
+  type: select
+  label: Post Type
+  description: Choose a post type
+  hidden: false
+  config:
+    source:
+      type: custom
+    options:
+      - "Article"
+      - "Snippet"
 pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
