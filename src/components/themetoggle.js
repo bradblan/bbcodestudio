@@ -21,7 +21,11 @@ class ThemeToggle extends React.Component {
                 onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
                 checked={theme === "dark"}
               />{" "}
-              <label htmlFor="themeChoice" class="theme-switch">
+              <label
+                htmlFor="themeChoice"
+                class="theme-switch"
+                title="Choose dark or light theme"
+              >
                 <span class="sr-only">Dark mode</span>
               </label>
             </div>

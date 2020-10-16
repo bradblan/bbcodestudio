@@ -1,18 +1,15 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import sidenavmenus from "../data/sidenavmenus"
+import Toggle from "../components/toggle"
 import {
-  VscChevronDown,
-  VscChevronRight,
   VscExtensions,
   VscFiles,
-  VscMarkdown,
   VscSearch,
   VscSourceControl,
   VscDebugAlt2,
 } from "react-icons/vsc"
-import { DiSass } from "react-icons/di"
-import { FcFolder, FcOpenedFolder } from "react-icons/fc"
 import ThemeToggle from "./themetoggle"
 
 const Layout = ({ location, title, children }) => {
@@ -29,6 +26,7 @@ const Layout = ({ location, title, children }) => {
     }
   `)
   const logo = data?.logo?.childImageSharp?.fluid
+  const menuitems = sidenavmenus
 
   return (
     <div className="container global-wrapper">
@@ -69,56 +67,24 @@ const Layout = ({ location, title, children }) => {
           </div>
           <div class="side-bar">
             <div class="side-nav-container">
-              <div class="needed-to-make-collapse-work">
-                <a id="hidePosts" href="#hidePosts" class="hide">
-                  <VscChevronRight />
-                  <FcFolder />
-                  &nbsp;Posts
-                </a>
-                <a id="showPosts" href="#showPosts" class="show">
-                  <VscChevronDown />
-                  <FcOpenedFolder />
-                  &nbsp;Posts
-                </a>
-                <div id="posts" class="side-links">
-                  <Link to="#">
-                    <VscMarkdown /> Articles.md
-                  </Link>
-                  <Link to="#">
-                    <VscMarkdown /> Snippets.md
-                  </Link>
-                  <Link to="#">
-                    <VscMarkdown /> Categories.md
-                  </Link>
-                  <Link to="#">
-                    <VscMarkdown /> Tags.md
-                  </Link>
-                </div>
+              <div id="posts" class="side-links">
+                <Toggle
+                  id="posts"
+                  menuItems={menuitems.posts}
+                  type="button"
+                  title="Posts"
+                />
               </div>
-              <div class="needed-to-make-collapse-work">
-                <a id="hideThemes" href="#hideThemes" class="hide">
-                  <VscChevronRight />
-                  <FcFolder />
-                  &nbsp;Themes
-                </a>
-                <a id="showThemes" href="#showThemes" class="show">
-                  <VscChevronDown />
-                  <FcOpenedFolder />
-                  &nbsp;Themes
-                </a>
-                <div id="themes" class="side-links">
-                  <Link to="assets/light_preview.png">
-                    <DiSass />
-                    Light.scss
-                  </Link>
-                  <Link to="assets/dark_preview.png">
-                    <DiSass />
-                    Dark.scss
-                  </Link>
-                  <ThemeToggle />
-                </div>
+              <div id="themes" class="side-links">
+                <Toggle
+                  id="themes"
+                  menuItems={menuitems.themes}
+                  type="button"
+                  title="Themes"
+                />
               </div>
             </div>
+            <ThemeToggle />
             <div class="copyright">
               © {new Date().getFullYear()}
               <br />

@@ -101,6 +101,11 @@ body {
               width: $bbcs-wSideNav - $bbcs-wActivityBar;
             }
           }
+
+          button {
+            @extend .btn;
+            @extend .btn-link;
+          }
         }
 
         #themes {
@@ -150,6 +155,44 @@ body {
   .side-nav-container {
     background-color: inherit;
     min-height: 24rem;
+
+    .side-links {
+      .menu-container {
+        button {
+          @extend .btn-link;
+          color: inherit !important;
+          font-size: inherit !important;
+          font-weight: 600 !important;
+          padding: 0 !important;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            box-shadow: none !important;
+            text-decoration: none !important;
+          }
+
+          &:focus {
+            outline: none !important;
+          }
+        }
+
+        ul {
+          display: none;
+          list-style-type: none;
+          padding-left: 0;
+          transition: 0.1s transform ease, 0.3s visibility ease;
+          visibility: hidden;
+          will-change: transform visibility;
+
+          &.show {
+            display: block;
+            visibility: visible;
+          }
+        }
+      }
+    }
   }
 
   .site-logo {
@@ -158,7 +201,7 @@ body {
   }
 
   .theme-choice {
-    margin-left: 5.3rem;
+    text-align: center;
 
     .theme-checkbox {
       display: none;
