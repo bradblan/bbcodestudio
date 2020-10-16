@@ -1,3 +1,4 @@
+const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -27,6 +28,18 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/blogpost.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+      },
+    })
+  })
 }
 
 exports.createSchemaCustomization = ({ actions }) => {

@@ -8,8 +8,8 @@ fields:
   description: ''
   config:
     required: true
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
   default: now
 - name: title
@@ -18,6 +18,11 @@ fields:
   description: ''
   config:
     required: true
+- name: publish
+  type: boolean
+  label: Publish post?
+  description: This post is ready to be published
+  default: false
 - name: tags
   type: tag_list
   label: Site Tags

@@ -4,13 +4,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Index = ({ data, location }) => {
+const Index = ({ data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const title = "Home"
   const pageTitle = title + " - " + siteTitle
 
   return (
-    <Layout location={location} title={pageTitle}>
+    <Layout title={pageTitle}>
       <SEO title={title} />
       <div id="contentHome">
         <div class="header-home">

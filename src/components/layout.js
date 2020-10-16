@@ -12,7 +12,7 @@ import {
 } from "react-icons/vsc"
 import ThemeToggle from "./themetoggle"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
     query LogoQuery {
       logo: file(absolutePath: { regex: "/bb_logo.png/" }) {
