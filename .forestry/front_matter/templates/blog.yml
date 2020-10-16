@@ -8,8 +8,8 @@ fields:
   description: ''
   config:
     required: true
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
   default: now
 - name: title
@@ -18,5 +18,35 @@ fields:
   description: ''
   config:
     required: true
-pages:
+- name: tags
+  type: tag_list
+  label: Site Tags
+  description: Pick your poison
+  default:
+  - React
+  - Gatsby
+  - CSS
+- name: category
+  type: select
+  label: Category
+  description: Select a category for this page
+  hidden: false
+  config:
+    source:
+      type: custom
+    options:
+        - "CSS"
+        - "Gatsby"
+        - "React"
+- name: type
+  type: select
+  label: Article Type
+  description: Choose the article type
+  config:
+    source:
+      type: custom
+    options:
+      - "Article"
+      - "Snippet"
+  pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
