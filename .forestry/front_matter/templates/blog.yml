@@ -8,8 +8,8 @@ fields:
   description: ''
   config:
     required: true
-    date_format:
-    time_format:
+    date_format: 
+    time_format: 
     display_utc: false
   default: now
 - name: title
@@ -23,13 +23,13 @@ fields:
   label: Site Tags
   description: Pick your poison
   default:
-    - Bootstrap
-    - Breadcrumbs
-    - CMS
-    - Code
-    - CSS
-    - Debugging
-    - Graphql
+  - Bootstrap
+  - Breadcrumbs
+  - CMS
+  - Code
+  - CSS
+  - Debugging
+  - Graphql
 - name: category
   type: select
   label: Category
@@ -39,11 +39,11 @@ fields:
     source:
       type: custom
     options:
-      - "Accessibility"
-      - "Code"
-      - "Css"
-      - "Gatsby"
-      - "React"
+    - Accessibility
+    - Code
+    - Css
+    - Gatsby
+    - React
 - name: type
   type: select
   label: Post Type
@@ -53,7 +53,7 @@ fields:
     source:
       type: custom
     options:
-      - "Article"
-      - "Snippet"
+    - Article
+    - Snippet
 pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
