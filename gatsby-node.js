@@ -76,6 +76,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      publish: Boolean
       category: String
       tags: [String]
       type: String
