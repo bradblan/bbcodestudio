@@ -38,15 +38,5 @@ fields:
         - "CSS"
         - "Gatsby"
         - "React"
-- name: type
-  type: select
-  label: Article Type
-  description: Choose the article type
-  config:
-    source:
-      type: custom
-    options:
-      - "Article"
-      - "Snippet"
   pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
