@@ -18,5 +18,14 @@ fields:
   description: ''
   config:
     required: true
+- name: tags
+  type: tag_list
+  label: Site Tags
+  description: Pick your poison
+  default:
+    - Code
+    - CSS
+    - Gatsby
+    - React
 pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
