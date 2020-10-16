@@ -26,17 +26,5 @@ fields:
   - React
   - Gatsby
   - CSS
-- name: category
-  type: select
-  label: Category
-  description: Select a category for this page
-  hidden: false
-  config:
-    source:
-      type: custom
-    options:
-        - "CSS"
-        - "Gatsby"
-        - "React"
   pages:
 - src/content/posts/welcome-to-the-bb-code-studio-blog.md
