@@ -5,7 +5,7 @@ tags:
 - Site Build
 category: Code
 type: Snippet
-publish: true
+publish: false
 
 ---
 This is the ongoing story of my adventures with React and Gatsby.  I recently developed my first website with Gatsby, and I learned many things along the way.   This blog will help me keep a record of these insights and possibly help some others along the way.
