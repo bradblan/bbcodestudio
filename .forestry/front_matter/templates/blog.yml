@@ -20,7 +20,7 @@ fields:
     required: true
 - name: tags
   type: tag_list
-  label: Site Tags
+  label: 'Site Tags'
   description: 'Pick your poison'
   default:
   - React
