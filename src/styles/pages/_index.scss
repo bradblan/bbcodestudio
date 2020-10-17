@@ -29,6 +29,13 @@ body {
       }
     }
 
+    &.bigger {
+      img {
+        height: 120%;
+        width: 120%;
+      }
+    }
+
     &.small {
       img {
         height: 75%;

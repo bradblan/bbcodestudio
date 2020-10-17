@@ -1,0 +1,40 @@
+@mixin ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipses;
+}
+
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+@mixin opacity($opacity) {
+  $opacity-ie: ($opacity * 100); // IE8 filter
+  filter: alpha(opacity=$opacity-ie);
+  opacity: $opacity;
+}
+
+@mixin prefixed($property, $value) {
+  -webkit-#{$property}: $value; // Attach webkit prefix (Chrome, Safary, Some Android native browsers)
+  -moz-#{$property}: $value; // Attach moz prefix (FireFox)
+  -o-#{$property}: $value; // Attach o prefix (Opera)
+  #{$property}: $value; // no prefix (modern browsers and latest IE versions)
+}
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
