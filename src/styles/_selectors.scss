@@ -1,4 +1,9 @@
 body {
+  #contentTop {
+    .container {
+      width: $bbcs-wContainerContent;
+    }
+  }
   .bbcs-card {
     background-color: $bbcs-cFontDark;
     border: $bbcs-cFont 1px solid;

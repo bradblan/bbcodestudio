@@ -8,7 +8,8 @@ module.exports = {
     description: `A coder's blog.`,
     siteUrl: `https://bradblan.github.io/`,
     social: {
-      linkedin: `brad-blan-79336375`,
+      linkedin: `https://www.linkedin.com/in/brad-blan-79336375`,
+      github: `https://github.com/bradblan`,
     },
   },
   plugins: [

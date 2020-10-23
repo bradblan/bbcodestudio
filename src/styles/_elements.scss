@@ -42,6 +42,42 @@ body {
     }
   }
 
+  img {
+    &.big {
+      height: 95%;
+      width: 95%;
+    }
+
+    &.bigger {
+      height: 120%;
+      width: 120%;
+    }
+
+    &.madnerd {
+      max-width: 40rem;
+    }
+
+    &.medium {
+      height: 85%;
+      width: 85%;
+    }
+
+    &.small {
+      height: 75%;
+      width: 75%;
+    }
+
+    &.smaller {
+      height: 65%;
+      width: 65%;
+    }
+
+    &.smallest {
+      height: 50%;
+      width: 50%;
+    }
+  }
+
   main {
     margin-left: $bbcs-wSideNav;
     margin-top: 4rem;

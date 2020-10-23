@@ -2,12 +2,12 @@ const menus = {
   posts: [
     {
       name: "Articles.md",
-      link: "#",
+      link: "/articles",
       type: "markdown",
     },
     {
       name: "Snippets.md",
-      link: "#",
+      link: "/snippets",
       type: "markdown",
     },
     {

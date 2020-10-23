@@ -1,16 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const About = ({ data }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const About = () => {
   const title = "About"
-  const pageTitle = title + " - " + siteTitle
 
   return (
-    <Layout title={pageTitle}>
+    <Layout title={title}>
       <SEO title={title} />
       <div class="content-wrapper">
         <h1 class="text-center">About...this site</h1>
@@ -50,7 +47,7 @@ const About = ({ data }) => {
         <div class="row col-12">
           <p>
             Oh, and that coworker, he says I have a masters degree in
-            GoogleScience Engineering also known as:
+            GoogleSearch Engineering also known as:
           </p>
           <h2 class="mx-auto">MaGE</h2>
         </div>
@@ -60,13 +57,3 @@ const About = ({ data }) => {
 }
 
 export default About
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

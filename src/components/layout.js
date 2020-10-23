@@ -23,6 +23,11 @@ const Layout = ({ title, children }) => {
           }
         }
       }
+      site {
+        siteMetadata {
+          title
+        }
+      }
     }
   `)
   const logo = data?.logo?.childImageSharp?.fluid
@@ -54,7 +59,9 @@ const Layout = ({ title, children }) => {
             </nav>
           </div>
           <div class="col-6">
-            <h1 className="main-heading">{title}</h1>
+            <h1 className="main-heading">
+              {title + " - " + data.site.siteMetadata.title}
+            </h1>
           </div>
         </div>
         <div id="sideNav">
@@ -84,7 +91,9 @@ const Layout = ({ title, children }) => {
                 />
               </div>
             </div>
-            <ThemeToggle />
+            <div id="themeSwitch">
+              <ThemeToggle />
+            </div>
             <div class="copyright">
               © {new Date().getFullYear()}
               <br />

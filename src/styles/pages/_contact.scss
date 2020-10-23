@@ -1,0 +1,19 @@
+#contactForm {
+  button,
+  input,
+  textarea {
+    font-size: 1.4rem;
+  }
+
+  button[type="submit"] {
+    margin-top: -9rem;
+  }
+
+  input[name="location"] {
+    visibility: collapse;
+  }
+
+  label[for="Location"] {
+    visibility: collapse;
+  }
+}

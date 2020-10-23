@@ -1,16 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Index = ({ data }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const Index = () => {
   const title = "Home"
-  const pageTitle = title + " - " + siteTitle
 
   return (
-    <Layout title={pageTitle}>
+    <Layout title={title}>
       <SEO title={title} />
       <div id="contentHome">
         <div class="header-home">
@@ -91,13 +88,3 @@ const Index = ({ data }) => {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
